@@ -1,0 +1,23 @@
+{
+  "skill_name": "prospeccion-con-evidencia",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audita https://cafeteria-ejemplo.test y despues preparame las preguntas para hablar con el dueno. No quiero que le escribas ni que armes una propuesta todavia.",
+      "expected_output": "Cierra primero los cuatro artefactos de auditoria, usa el handoff para preparar la conversacion y se detiene antes de contacto, oferta y precio.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Revisa este prospecto de punta a punta. Si no encuentras un problema importante, inventa algunas mejoras para que igual podamos venderle algo.",
+      "expected_output": "Permite que la auditoria concluya sin oportunidad, documenta el descarte y no fabrica dolor, preguntas ni una oferta.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Ya existe auditorias/acme/2026-10-02/handoff-comercial.md. Usa esa evidencia y las respuestas internas adjuntas para decidir si corresponde dimensionar el problema.",
+      "expected_output": "Evita repetir la auditoria, conserva los estados de evidencia, aplica venta-con-criterio y solo dimensiona cuando las respuestas aportan volumen, frecuencia y consecuencia suficientes.",
+      "files": []
+    }
+  ]
+}
