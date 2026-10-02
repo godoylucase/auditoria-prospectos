@@ -57,16 +57,64 @@ Los archivos resultantes contienen respectivamente `.codex/skills/`, `.claude/sk
 
 ## Ejecutar
 
-Cadena completa:
+### Que skill usar
 
-- Codex: `Usa $prospeccion-con-evidencia para auditar https://ejemplo.com y preparar las preguntas comerciales.`
-- Claude Code: `/prospeccion-con-evidencia https://ejemplo.com`
-- OpenCode: `Usa la skill prospeccion-con-evidencia para auditar https://ejemplo.com y preparar las preguntas comerciales.`
+| Necesidad | Skill | Resultado esperado |
+| --- | --- | --- |
+| Auditar un sitio y revisar la evidencia antes de hablar de venta | `auditoria-web-prospectos` | Informe de auditoria y `handoff-comercial.md` |
+| Preparar una conversacion a partir de una auditoria existente | `venta-con-criterio` | Diagnostico comercial y preguntas; oferta o precio solo si hay evidencia suficiente |
+| Ejecutar todo el recorrido | `prospeccion-con-evidencia` | Auditoria, handoff y preparacion comercial |
 
-Ejecucion en dos etapas, recomendada cuando queres revisar la evidencia antes de preparar la conversacion:
+La cadena completa es:
 
-1. Invoca `auditoria-web-prospectos` con la URL y detenete al generar `handoff-comercial.md`.
-2. Revisa el informe e invoca `venta-con-criterio` con la ruta al handoff.
+```text
+auditoria-web-prospectos -> handoff-comercial.md -> venta-con-criterio
+              \____________ prospeccion-con-evidencia ____________/
+```
+
+La ejecucion en dos etapas es la recomendada para las primeras pruebas: permite revisar los hechos y las hipotesis del handoff antes de preparar la conversacion. Ninguna invocacion autoriza contactar al prospecto.
+
+### Codex
+
+Usa `$nombre-de-la-skill` para seleccionarla de forma explicita:
+
+```text
+$auditoria-web-prospectos Audita https://ejemplo.com y detenete al generar handoff-comercial.md.
+
+$venta-con-criterio Usa auditorias/ejemplo/AAAA-MM-DD/handoff-comercial.md para preparar las preguntas de descubrimiento. No armes oferta ni precio.
+
+$prospeccion-con-evidencia Audita https://ejemplo.com y prepara la conversacion comercial. No contactes al prospecto.
+```
+
+Tambien podes abrir `/skills` para comprobar que las tres skills esten disponibles.
+
+### Claude Code
+
+Invoca cada skill como comando slash y agrega las instrucciones despues del argumento:
+
+```text
+/auditoria-web-prospectos https://ejemplo.com y detenete al generar handoff-comercial.md
+
+/venta-con-criterio auditorias/ejemplo/AAAA-MM-DD/handoff-comercial.md prepara las preguntas de descubrimiento; no armes oferta ni precio
+
+/prospeccion-con-evidencia https://ejemplo.com prepara la conversacion comercial sin contactar al prospecto
+```
+
+### OpenCode
+
+La forma compatible entre versiones es pedir la skill por nombre:
+
+```text
+Usa la skill auditoria-web-prospectos para auditar https://ejemplo.com y detenete al generar handoff-comercial.md.
+
+Usa la skill venta-con-criterio con auditorias/ejemplo/AAAA-MM-DD/handoff-comercial.md para preparar las preguntas de descubrimiento. No armes oferta ni precio.
+
+Usa la skill prospeccion-con-evidencia para auditar https://ejemplo.com y preparar la conversacion comercial. No contactes al prospecto.
+```
+
+En versiones que exponen las skills como comandos slash, tambien podes usar `/auditoria-web-prospectos`, `/venta-con-criterio` y `/prospeccion-con-evidencia`.
+
+Reemplaza `https://ejemplo.com` por el sitio del prospecto y la ruta de ejemplo por el `handoff-comercial.md` generado. Si instalaste las skills durante una sesion abierta y no aparecen, inicia una sesion nueva.
 
 Cada plataforma puede seleccionar una skill automaticamente a partir de su descripcion, pero la invocacion explicita reduce ambiguedad durante las primeras pruebas.
 
