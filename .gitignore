@@ -3,3 +3,23 @@ __pycache__/
 *.py[cod]
 *.swp
 *.tmp
+
+# Resultados privados de cada ejecucion. Solo pasan a examples/ con autorizacion.
+/auditorias/
+
+# Artefactos generados por el empaquetador.
+/dist/
+
+# Instalaciones locales generadas desde la fuente canonica en skills/.
+/.codex/skills/auditoria-web-prospectos/
+/.codex/skills/venta-con-criterio/
+/.codex/skills/prospeccion-con-evidencia/
+/.codex/skills/shared/
+/.claude/skills/auditoria-web-prospectos/
+/.claude/skills/venta-con-criterio/
+/.claude/skills/prospeccion-con-evidencia/
+/.claude/skills/shared/
+/.opencode/skills/auditoria-web-prospectos/
+/.opencode/skills/venta-con-criterio/
+/.opencode/skills/prospeccion-con-evidencia/
+/.opencode/skills/shared/

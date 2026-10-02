@@ -1,9 +1,0 @@
-url,http_status,final_url,page_type,surface_owner,title,h1_count,description_present,canonical,sources,checked_at,notes
-https://panicafe.com/,200,https://panicafe.com/,landing,prospecto,Panicafé — Sabores Artesanales,2,true,https://panicafe.com/,seed,2026-10-02T13:26:06Z,"Un H1 pertenece al selector de país oculto; hay un H1 visible en el estado normal"
-http://panicafe.com/,200,https://panicafe.com/,canonical_redirect,prospecto,,,false,https://panicafe.com/,variant-check,2026-10-02T13:36:00Z,"Redirección única de HTTP a HTTPS"
-https://www.panicafe.com/,0,https://www.panicafe.com/,dns_alias,prospecto,,,false,,variant-check,2026-10-02T13:36:00Z,"No resolvió DNS desde la consulta HTTP"
-https://panicafe.com/robots.txt,404,https://panicafe.com/robots.txt,discovery,prospecto,404 Not Found,1,false,,seed,2026-10-02T13:26:06Z,"Amazon S3 NoSuchKey"
-https://panicafe.com/sitemap.xml,404,https://panicafe.com/sitemap.xml,discovery,prospecto,404 Not Found,1,false,,seed,2026-10-02T13:26:06Z,"Amazon S3 NoSuchKey"
-https://panicafe.com/assets/carta-saludable-panicafe.pdf,200,https://panicafe.com/assets/carta-saludable-panicafe.pdf,document,prospecto,PANICAFÉ - CARTA SEMANA DEL BIENESTAR,,false,,https://panicafe.com/,2026-10-02T13:27:51Z,"PDF de 8 páginas; creación 2026-08-03"
-https://buttercartaqr.com.ar/catalog/panicafe/cerro-de-las-rosas,200,https://buttercartaqr.com.ar/catalog/panicafe/cerro-de-las-rosas,third_party_menu,integracion,Menú Cerro de las Rosas - PaniCafe | Butter Carta QR,2,false,,https://panicafe.com/,2026-10-02T13:27:00Z,"Todas las CTA de carta de la landing apuntan a esta sucursal"
-https://panicafetx.com/,200,https://www.panicafetx.com/,country_handoff,tercero,,,false,,https://panicafe.com/,2026-10-02T13:27:00Z,"Destino Estados Unidos del selector de país"

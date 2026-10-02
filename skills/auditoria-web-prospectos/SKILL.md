@@ -188,6 +188,8 @@ Cuando haya filesystem disponible, crea `auditorias/<prospecto>/<AAAA-MM-DD>/` c
 - `handoff-comercial.md`: evidencia transferible, hipotesis y preguntas para la siguiente conversacion;
 - evidencia tecnica adicional solo si ayuda a reproducir o auditar el trabajo.
 
+Trata `auditorias/` como salida local privada. No copies, muevas ni adaptes una ejecucion a `examples/` salvo que el usuario autorice explicitamente ese caso despues de completarlo. La autorizacion para auditar no equivale a permiso para versionar o publicar el resultado.
+
 Usa la estructura exacta de [references/report-template.md](references/report-template.md). Para invocar el ejercicio fuera de esta skill, usa [references/prompt-base.md](references/prompt-base.md).
 
 En el chat, entrega una sintesis con:
