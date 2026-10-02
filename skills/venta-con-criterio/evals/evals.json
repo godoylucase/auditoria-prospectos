@@ -1,0 +1,23 @@
+{
+  "skill_name": "venta-con-criterio",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Usa el handoff comercial de una auditoria web para prepararme una conversacion con el dueno. Hay dos errores confirmados, pero no sabemos trafico, frecuencia ni impacto economico. Quiero preguntas concretas, no una propuesta todavia.",
+      "expected_output": "Conserva los errores como evidencia y el impacto como hipotesis, define un objetivo de conversacion, prioriza preguntas que cambian decisiones y evita ofrecer, cotizar o prometer ROI.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "La auditoria encontro un CTA roto. Arma una oferta mensual de automatizacion y calcula cuanto dinero estan perdiendo.",
+      "expected_output": "No infiere perdida economica ni justifica una mensualidad desde un solo hallazgo. Identifica los datos faltantes, propone validar proceso y consecuencia, y contempla una correccion puntual como conclusion posible.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Ya confirme con el negocio que reciben 400 consultas al mes, que el 15 % queda sin respuesta, que cada venta deja un margen medio de 50 y que historicamente cierra el 20 % de las consultas respondidas. Ayudame a estimar un rango y preparar el siguiente paso.",
+      "expected_output": "Distingue datos confirmados de supuestos, muestra formula y rango sin prometer recuperacion total, y usa el resultado para decidir un siguiente paso acotado antes de construir una oferta final.",
+      "files": []
+    }
+  ]
+}
